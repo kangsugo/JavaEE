@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="day10_hist"
-  id="myeclipse.1487832362118"
-  context-root="/day10_hist"
+  name="Guss_number_game"
+  id="myeclipse.1488452536761"
+  context-root="/Guss_number_game"
   j2ee-spec="5.0"
-  archive="day10_hist.war">
+  archive="Guss_number_game.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>
