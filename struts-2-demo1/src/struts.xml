@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	<package name="hello" namespace="/aaa" extends="struts-default">
+		<action name="HelloAction" class="cn.itcast.action.HelloAction" method="execute">
+			<result name="success" type="dispatcher">/index.jsp</result>
+		</action>
+	</package>
+	
+	<!-- 研究常量的包 -->
+	<package name="constant" namespace="/constant" extends="struts-default">
+		<action name="Demo1Action" class="cn.itcast.b_constant.Demo1Action" method="execute">
+			<result name="success" type="dispatcher">/index.jsp</result>
+		</action>
+	</package>
+   
+
+</struts>

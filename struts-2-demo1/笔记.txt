@@ -1,0 +1,37 @@
+1.表单中提交的地址如果是action，则也需要带上包名。
+<form action="/struts-2-demo1/constant/Demo1Action"  method="post">
+这里的地址不是包的地址，是在浏览器中访问action时的那个地址。
+
+
+2.web.xml中注册过滤器只需要注册一个
+    <filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+
+这一个过滤器可以对应到多个action：
+<struts>
+	<package name="hello" namespace="/aaa" extends="struts-default">
+		<action name="HelloAction" class="cn.itcast.action.HelloAction" method="execute">
+			<result name="success" type="dispatcher">/index.jsp</result>
+		</action>
+	</package>
+	
+	<!-- 研究常量的包 -->
+	<package name="constant" namespace="/constant" extends="struts-default">
+		<action name="Demo1Action" class="cn.itcast.b_constant.Demo1Action" method="execute">
+			<result name="success" type="dispatcher">/index.jsp</result>
+		</action>
+	</package>
+   
+
+</struts>
+
+
+
